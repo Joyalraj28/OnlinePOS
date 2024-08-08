@@ -1,0 +1,30 @@
+.transationnode{
+    background-color: whitesmoke;
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #0F67B1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 28vw;
+    font-size: 30px;
+    
+}
+
+.qty{
+    display: flex;
+    gap: 20px;
+}
+
+#increment , #decrement{
+    font-size: 20px;
+    height: 40px;
+    width: 20px;
+    border-radius: 50px; 
+    align-items: center;   
+}
+
+#increment:hover , #decrement:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,134 @@
+body{
+    margin: 0px;
+}
+
+.continer{
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 30px 1fr 30px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-panel{
+    background-color: #0F67B1;
+    display: grid;
+    align-items:center;
+    justify-content: center;
+    grid-column: 1/3;
+
+}
+
+.transation-panel{
+    align-items:start;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    width: 100%;
+    justify-content: start;
+}
+
+.menu-panel{
+    /* background-color: #3FA2F6; */
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap:12px;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(4,200px);
+    padding: 10px;
+    align-items:start;
+    justify-content: start;
+    font-size: 100px;
+    
+
+}
+
+.menu-panel > button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+    
+}
+
+
+
+
+
+
+
+
+.menu-panel > button > i {
+    margin: 10px;
+  
+}
+
+.menu-panel > button > label {
+    font-size: 25px;
+  
+}
+
+
+
+
+.footer-panel{
+    background-color: #0F67B1;
+    display: grid;
+    align-items:center;
+    justify-content: center;
+    grid-column: 1/3;
+}
+
+
+.transanion-header{
+    background-color: #96C9F4;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.transanion-footer{
+    background-color: #96C9F4;
+    display: flex;
+    gap: 2px;
+    padding: 10px;
+    align-items: end;
+}
+
+.transanion-footer > label{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#total{
+    margin-left: 400px;
+}
+
+.menu-panel, .popup{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:2 ;
+    grid-row-end: 3;
+    z-index: 10;
+    margin: 10px;
+    
+}
+
+.popup{
+    z-index: 11;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+
+.popup > h1 {
+    margin: 10px;
+}
