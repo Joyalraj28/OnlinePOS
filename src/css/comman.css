@@ -17,55 +17,40 @@ body{
     align-items:center;
     justify-content: center;
     grid-column: 1/3;
-
 }
+
 
 .transation-panel{
     align-items:start;
     display: grid;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 10% 75% 10%;
     width: 100%;
     justify-content: start;
 }
 
+/* Menu */
 .menu-panel{
-    /* background-color: #3FA2F6; */
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    gap:12px;
-    grid-template-columns: repeat(4,auto);
-    grid-template-rows: repeat(4,200px);
-    padding: 10px;
-    align-items:start;
-    justify-content: start;
-    font-size: 100px;
-    
-
+     height: 100%;
+     overflow: hidden;
+     display: grid;
+     grid-gap: 5px;
+     grid-template-rows: 8fr 2fr;
+     padding: 10px;
 }
 
-.menu-panel > button{
+.menu-panel button{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15px 25px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     outline: none;
-    
 }
 
-
-
-
-
-
-
-
-.menu-panel > button > i {
+.menu-panel  button > i {
     margin: 10px;
   
 }
@@ -75,9 +60,39 @@ body{
   
 }
 
+/* .item-panel{
+    
+} */
+
+.item-panel{
+    height: 100%;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap:12px;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(4,200px);
+    align-items:start;
+    justify-content: start;
+    font-size: 100px;
+
+}
+
+.func-panel {
+    display: flex;
+    gap: 10px;
+}
+
+.func-panel {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
 
 
 
+/*  */
 .footer-panel{
     background-color: #0F67B1;
     display: grid;
@@ -95,12 +110,43 @@ body{
 
 }
 
-.transanion-footer{
+.footer{
+    height: 100%;
+}
+
+.transanion-status,.transanion-footer{
     background-color: #96C9F4;
     display: flex;
     gap: 2px;
     padding: 10px;
     align-items: end;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.transanion-status{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    /* background-color: #ef6363; */
+    color: white;
+    /* visibility: visible; */
+    visibility: collapse;
+}
+
+.transanion-status{
+    animation: blink 1s infinite; 
 }
 
 .transanion-footer > label{
@@ -129,6 +175,170 @@ body{
     border-radius: 10px;
 }
 
+/* popup */
 .popup > h1 {
     margin: 10px;
 }
+
+.popupbox{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 15fr;
+}
+
+.Receipt > table,tr{
+    width: 100%;
+}
+
+.Receipt > table  {
+    font-size: 20px;
+}
+
+.Receipt > table > tr > th{
+    border-top: 1px;
+    border-top-style: dotted;
+    text-align: start;
+    
+}
+
+.Receipt > table > tr > td{
+    text-align: start;
+}
+
+.Receipt > table > tr > th,td {
+    border-bottom: 1px;
+    border-bottom-style: dotted;
+    padding: 5px;
+}
+
+#HeaderRow  > th{
+    text-align: center;
+}
+
+#FooterRow > th{
+    text-align: end;
+}
+
+.topbar{
+    display: flex;
+    justify-content: end;
+    grid-row: 1;
+}
+
+.popupbody{
+   grid-row: 2;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.closebtn{
+    background-image: linear-gradient(-180deg, #EE4E4E 0%, #FF6969 100%);
+    width: 50px;
+    height: 50px;
+}
+
+.closebtn:active{
+    background-image: linear-gradient(-180deg, #ef6363 0%, #fb7474 100%);
+}
+
+.popupbody > form{
+   width: 100%;
+   height: 100%;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.popupbody >form > button{
+    width: 200px;
+    margin-top: 10px;
+}
+
+.popupbody > form > input{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.popupbody > form > label{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+    width: 500px;
+}
+
+.popupbody > form > input:focus{
+    outline: transparent;
+}
+
+
+/*  */
+
+button {
+    background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+ 
+button:active{
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+  }
+
+.maininput{
+    font-size: 20px;
+    background-color: transparent;
+    border: transparent;
+    color: transparent;
+
+  }
+
+.maininput:focus{
+    outline: transparent;
+}
+
+
+.maininput:hover{
+    cursor: none;
+}
+
+  
+/* Chrome, Safari, Edge, Opera */
+.maininput::-webkit-outer-spin-button,
+.maininput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+ 
+}
+
+/* Firefox */
+/* .maininput {
+    -moz-appearance: textfield;
+} */
+
+.hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }

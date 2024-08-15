@@ -1,8 +1,8 @@
 import "/src/Component/Props/Button.css";
-import ITextButton from "../../Interface/ITextButton";
+import ITextButton, { ButtonType } from "../../Interface/ITextButton";
 
 const TextButton:React.FC<ITextButton>=(prop:ITextButton)=>{
-    return  <button onClick={() => prop.OnClick(prop.Text)} style={{width:prop.width,height:prop.height}}>
+    return  <button className={prop.type==ButtonType.default?"def-button":"fun-button"} onClick={() => prop.OnClick(prop.Text)} style={{width:prop.width,height:prop.height}}>
     <label>{prop.Text}</label>
      </button>
 }

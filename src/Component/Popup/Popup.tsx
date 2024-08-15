@@ -1,15 +1,30 @@
-import React from "react";
-import "/src/css/comman.css";
+import React, { ReactElement } from "react";
 import "/src/css/comman.css";
 
-const Popup:React.FC<{}> = ()=>{
+export interface IPopup{
+    children:ReactElement,
+    funcName:string,
+    IsVisble:boolean
+    Close:(e:string)=>void;
+}
+
+
+const Popup:React.FC<IPopup> = ({funcName,children,IsVisble,Close}:IPopup)=>{
+
 
     return (<>
-     <div className="popup">
-            <h1>Heading 1</h1>
-            <button>Hello</button>
+     <div  style={{display:IsVisble ? "block" : "none" }} className="popup">
+       <div className="popupbox">
+        <div className="topbar">
+            <button onClick={() => Close(funcName)}  className="closebtn">X</button>
         </div>
-        </>);
+        <div className="popupbody">
+        {children}
+        </div>
+       
+        </div>
+    </div>
+    </>);
 }
 
 export default Popup;
